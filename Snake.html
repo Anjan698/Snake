@@ -1,19 +1,51 @@
+<!--all images were taken by doing google search-->
+
+
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <head>
-        <link rel ="stylesheet" href="style.css">
-    <title>Snakes and Ladders</title>
-   
-
-    </head>
-    <body>
-        <script  src="Snakes.js"></script>
-        <button onclick=rollDice()>Roll Dice</button>
-        <div id=board>
-          
-        </div>
-        <canvas id=canvas width="1000" height="1000"></canvas>
-
-    </body>
+<head>
+	<title>Snakes And Ladders</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel = "stylesheet" type = "text/css" href = "./style.css">
+</head>
+<body>
+<div id = "container">
+	<div id = "head">
+		<button onclick="singleplayer()">Start game</button>
+		
+	</div>
+	<div id="game">
+		<div>
+			<canvas id="board" width="600" height="600" style="border:1px solid black;">
+			</canvas>
+		</div>
+		<div id="dice">
+			<div id="diceHead">
+					<h1>SNAKES AND LADDERS</h1><br><br><br>
+				<div id="sbtn">
+					<p id="splayer"></p>
+					<button id="dicebtn" onclick="play()">Roll Dice</button>
+					<button id="reset" onclick="singlereset()">RESTART</button>
+				</div>
+				<div id="mbtn">
+					<p id ="mplayer"></p>
+					<button id="reset" onclick="multireset()">RESTART</button>
+					<button id="btn1" onclick="start()">play</button>
+				</div>
+			</div>
+			<div id="main">
+				<div id="cube">
+					<div class="cubeFace"></div>
+					<div class="cubeFace face2"></div>
+				</div>
+				<div id="overlay" onclick="off()">
+					<div id="number"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type = "text/javascript" src = "./Snakes.js"></script>
+</body>
 </html>
